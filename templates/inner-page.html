@@ -1,0 +1,667 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>Στάθης Σαμαράς - Index Greek</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+  <!-- Favicons -->
+  <link href="{% static 'img/favicon.png' %}" rel="icon">
+  <link href="{% static 'img/apple-touch-icon.png' %}" rel="apple-touch-icon">
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+  <!-- Vendor CSS Files -->
+  <link href="{% static 'vendor/aos/aos.css' %}" rel="stylesheet">
+  <link href="{% static 'vendor/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
+  <link href="{% static 'vendor/bootstrap-icons/bootstrap-icons.css' %}" rel="stylesheet">
+  <link href="{% static 'vendor/boxicons/css/boxicons.min.css' %}" rel="stylesheet">
+  <link href="{% static 'vendor/glightbox/css/glightbox.min.css' %}" rel="stylesheet">
+  <link href="{% static 'vendor/swiper/swiper-bundle.min.css' %}" rel="stylesheet">
+  <!-- Template Main CSS File -->
+  <link href="{% static 'css/style.css' %}" rel="stylesheet">
+</head>
+<body>
+  <!-- ======= Mobile nav toggle button ======= -->
+  <i class="bi bi-list mobile-nav-toggle d-xl-none"></i>
+  <!-- ======= Header ======= -->
+  <header id="header">
+    <div class="d-flex flex-column">
+      <div class="profile">
+        <img src="{% static 'img/stathissamaras.webp' %}" alt="" class="img-fluid rounded-circle">
+        <h1 class="text-light"><a href="{% url 'inner-page' %}">Στάθης Σαμαράς</a></h1>
+        <div class="social-links mt-3 text-center">
+          <a href="#portfolio" class="gallery"><i class="bx bx-images"></i></a>
+          <a href="#testimonials" class="photos"><i class="bx bx-camera"></i></a>
+          <a href="#contact" class="email"><i class="bx bx-mail-send"></i></a>
+          <a href="#hero" class="python"><i class="bx bxl-python"></i></a>
+          <a href="#contact" class="location"><i class="bx bx-map"></i></a>
+        </div>      
+      </div>
+      <nav id="navbar" class="nav-menu navbar">
+        <ul>
+          <li><a href="#hero" class="nav-link scrollto active"><i class="bx bx-home"></i> <span>Αρχική</span></a></li>
+          <li><a href="#about" class="nav-link scrollto"><i class="bx bx-user"></i> <span>Εγώ...</span></a></li>
+          <li><a href="#resume" class="nav-link scrollto"><i class="bx bx-file-blank"></i> <span>Βιογραφικό</span></a></li>
+          <li><a href="#portfolio" class="nav-link scrollto"><i class="bx bx-book-content"></i> <span>Συλλογή</span></a></li>
+          <li><a href="#services" class="nav-link scrollto"><i class="bx bx-server"></i> <span>Υπηρεσίες</span></a></li>
+          <li><a href="#contact" class="nav-link scrollto"><i class="bx bx-envelope"></i> <span>Επικοινωνία</span></a></li>
+          <li><a href="{% url 'index' %}" class="nav-link scrollto"><i class="bx bx-world"></i> <span>English</span></a></li>
+        </ul>
+      </nav><!-- .nav-menu -->
+    </div>
+  </header><!-- End Header -->
+  <!-- ======= Hero Section ======= -->
+  <section id="hero" class="d-flex flex-column justify-content-center align-items-center">
+    <div class="hero-container" data-aos="fade-in">
+      <h1>Στάθης Σαμαράς</h1>
+      {% if success_message %}
+      <div class="alert alert-success alert-dismissible fade show">
+        {{ success_message }}
+        <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+      </div>
+      {% endif %}
+      
+      {% if error_message %}
+      <div class="alert alert-danger alert-dismissible fade show">
+        {{ error_message }}
+        <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+      </div>
+      {% endif %}
+      <p>Είμαι.. <span class="typed" data-typed-items="Full Stack Developer, Database Designer, Business Consultant, Python Specialist, Technical Expert, Logistics Administrator,"></span></p>
+    </div>
+  </section><!-- End Hero -->
+  <main id="main">
+    <!-- ======= About Section ======= -->
+    <section id="about" class="about">
+      <div class="container">
+        <div class="section-title">
+          <h2>για εμένα...</h2>
+          <p>
+            Με πάθος για την τεχνολογία και τη δημιουργικότητα, απολαμβάνω να λύνω πολύπλοκα προβλήματα, να αναπτύσσω πρακτικές
+            και καινοτόμες λύσεις που βελτιώνουν τις διαδικασίες και ενισχύουν την αποδοτικότητα.
+          </p>
+        </div>
+        <div class="row">
+          <div class="col-lg-4" data-aos="fade-right">
+            <img src="{% static 'img/s_samaras.webp' %}" class="img-fluid" alt="">
+          </div>
+          <div class="col-lg-8 pt-4 pt-lg-0 content" data-aos="fade-left">
+            <h3>Industrial Business Consultant &amp; Technical Operations Manager.</h3>
+            <p class="fst-italic">
+              Ειδικεύομαι στη βιομηχανική συμβουλευτική, στις τεχνικές λειτουργίες και στη διαχείριση της παραγωγικής αλυσίδας,
+              διασφαλίζοντας την ομαλή σύνδεση μεταξύ κατασκευαστών και διανομέων.
+            </p>
+            <div class="row">
+              <div class="col-lg-6">
+                  <ul>
+                      <li><i class="bi bi-chevron-right"></i> <strong>Γέννηση:</strong> <span>16 Σεπτεμβρίου</span></li>
+                      <li><i class="bi bi-chevron-right"></i> <strong>Website:</strong> <span>www.oktoweb.gr</span></li>
+                      <li><i class="bi bi-chevron-right"></i> <strong>Τηλέφωνο:</strong> <span>+30 6994 723 600</span></li>
+                      <li><i class="bi bi-chevron-right"></i> <strong>Πόλη:</strong> <span>Θεσσαλονίκη, Ελλάδα</span></li>
+                  </ul>
+              </div>
+              <div class="col-lg-6">
+                  <ul>
+                      <li><i class="bi bi-chevron-right"></i> <strong>Ηλικία:</strong> <span>Αρκετή για να ξέρω τον τρόπο.</span></li>
+                      <li><i class="bi bi-chevron-right"></i> <strong>Ειδικότητα:</strong> <span>Software Engineering</span></li>
+                      <li><i class="bi bi-chevron-right"></i> <strong>Email:</strong> <span>info@oktoweb.gr</span></li>
+                      <li><i class="bi bi-chevron-right"></i> <strong>Εξειδίκευση:</strong> <span>Στρατηγικός Σχεδιασμός</span></li>
+                  </ul>
+              </div>
+          </div>
+          <p>  
+            Διαχειρίζομαι ολόκληρο τον κύκλο των βιομηχανικών προϊόντων, από τις διαπραγματεύσεις τιμών έως τις τεχνικές λειτουργίες, ακόμη και την υποστήριξη μετά την πώληση.  
+          </p>  
+          <p>  
+            Ταξιδεύω συνεχώς για να εξασφαλίσω τις καλύτερες συμφωνίες, να συντονίσω τη αλυσίδα και να δημιουργήσω δίκτυα επικοινωνίας μεταξύ βασικών τμημάτων, όπως ανταλλακτικά, εγγυήσεις και τεχνική υποστήριξη.  
+          </p>  
+          <p>  
+            Η εξειδίκευσή μου έγκειται στη γεφύρωση του χάσματος μεταξύ τεχνικών και εμπορικών διαδικασιών, διασφαλίζοντας αποδοτικότητα για βιομηχανίες και επιχειρήσεις.  
+          </p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- End About Section -->
+    <!-- ======= Facts Section ======= -->
+    <section id="facts" class="facts">
+      <div class="container">
+        <div class="section-title">
+          <h2>Επιτεύγματα</h2>
+          <p>Στην πορεία μου, έχω αποκτήσει πολύτιμη εμπειρία στα επιχειρηματικά οικοσυστήματα με αναπτυξιακή δυναμική, στη διεξαγωγή διεθνών διαπραγματεύσεων και στην ανάπτυξη στρατηγικών πωλήσεων. Παρακάτω είναι μερικά από τα βασικά ορόσημα της διαδρομής μου:</p>
+        </div>
+        <div class="row no-gutters">
+          <div class="col-lg-3 col-md-6 d-md-flex align-items-md-stretch" data-aos="fade-up">
+            <div class="count-box">
+              <i class="bi bi-emoji-smile"></i>
+              <span data-purecounter-start="0" data-purecounter-end="10" data-purecounter-duration="1" class="purecounter"></span>
+              <p><strong>Επιτυχημένες Συνεργασίες</strong> Εγκαθίδρυση συνεργασιών με διεθνείς κατασκευαστές και εμπόρους.</p>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-6 d-md-flex align-items-md-stretch" data-aos="fade-up" data-aos-delay="100">
+            <div class="count-box">
+              <i class="bi bi-building"></i>
+              <span data-purecounter-start="0" data-purecounter-end="45" data-purecounter-duration="1" class="purecounter"></span>
+              <p><strong>Συνεργαζόμενες Εταιρείες</strong> Συνεργασία με πάνω από 45 εταιρείες παγκοσμίως στους βιομηχανικούς, μηχανολογικούς και τεχνολογικούς τομείς.</p>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-6 d-md-flex align-items-md-stretch" data-aos="fade-up" data-aos-delay="200">
+            <div class="count-box">
+              <i class="bi bi-globe"></i>
+              <span data-purecounter-start="0" data-purecounter-end="18" data-purecounter-duration="1" class="purecounter"></span>
+              <p><strong>Χώρες Συνεργασίας</strong> Επιτυχής διαπραγμάτευση και διαχείριση έργων με πελάτες από 18+ χώρες παγκοσμίως.</p>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-6 d-md-flex align-items-md-stretch" data-aos="fade-up" data-aos-delay="300">
+            <div class="count-box">
+              <i class="bi bi-person-check"></i>
+              <span data-purecounter-start="0" data-purecounter-end="10" data-purecounter-duration="1" class="purecounter"></span>
+              <p><strong>Ομάδες</strong> Καθοδήγηση και συντονισμός 10 διατμηματικών ομάδων, υλοποιώντας έργα από τον αρχικό σχεδιασμό έως την επιτυχή ολοκλήρωση.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- End Facts Section -->    
+    <!-- ======= Technical Skills Section ======= -->
+    <section id="skills" class="skills section-bg">
+      <div class="container">
+        <div class="section-title">
+          <h2>Τεχνικές Δεξιότητες</h2>
+          <p>Με ισχυρό υπόβαθρο στη ανάπτυξη λογισμικού και τα επιχειρηματικά οικοσυστήματα, εξειδικεύομαι στην ανάπτυξη ERP/CRM, στην ανάλυση δεδομένων και στις full-stack web εφαρμογές. Παρακάτω είναι οι βασικές μου δεξιότητες:</p>
+        </div>
+        <div class="row skills-content">
+          <div class="col-lg-6" data-aos="fade-up">
+            <div class="progress">
+              <span class="skill">HTML <i class="val">100%</i></span>
+              <div class="progress-bar-wrap">
+                <div class="progress-bar" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
+              </div>
+            </div>
+            <div class="progress">
+              <span class="skill">CSS <i class="val">90%</i></span>
+              <div class="progress-bar-wrap">
+                <div class="progress-bar" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
+              </div>
+            </div>
+            <div class="progress">
+              <span class="skill">JavaScript <i class="val">95%</i></span>
+              <div class="progress-bar-wrap">
+                <div class="progress-bar" role="progressbar" aria-valuenow="95" aria-valuemin="0" aria-valuemax="100"></div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
+            <div class="progress">
+              <span class="skill">Postgres <i class="val">80%</i></span>
+              <div class="progress-bar-wrap">
+                <div class="progress-bar" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
+              </div>
+            </div>
+            <div class="progress">
+              <span class="skill">Ecommerce/CMS <i class="val">90%</i></span>
+              <div class="progress-bar-wrap">
+                <div class="progress-bar" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
+              </div>
+            </div>
+            <div class="progress">
+              <span class="skill">Photoshop <i class="val">85%</i></span>
+              <div class="progress-bar-wrap">
+                <div class="progress-bar" role="progressbar" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- End Technical Skills Section -->
+    <!-- ======= Business Skills Section ======= -->
+    <section id="skills" class="skills section-bg">
+      <div class="container">
+        <div class="section-title">
+          <h2>Επαγγελματικές Δεξιότητες</h2>
+          <p>Συνδυάζοντας τεχνική εξειδίκευση με ισχυρή επιχειρηματική αντίληψη, εξειδικεύομαι στην full-stack ανάπτυξη, στις βιομηχανικές πωλήσεις και στις διεθνείς διαπραγματεύσεις. Ακολουθούν μερικές από τις βασικές μου δεξιότητες:</p>
+        </div>    
+        <div class="row skills-content">
+          <div class="col-lg-6" data-aos="fade-up">
+            <div class="progress">
+              <span class="skill">Full Stack Development <i class="val">99%</i></span>
+              <div class="progress-bar-wrap">
+                <div class="progress-bar" role="progressbar" aria-valuenow="99" aria-valuemin="0" aria-valuemax="100"></div>
+              </div>
+            </div>
+            <div class="progress">
+              <span class="skill">JavaScript / Django / Python <i class="val">98%</i></span>
+              <div class="progress-bar-wrap">
+                <div class="progress-bar" role="progressbar" aria-valuenow="98" aria-valuemin="0" aria-valuemax="100"></div>
+              </div>
+            </div>
+            <div class="progress">
+              <span class="skill">PostgreSQL / MySQL / PgAdmin <i class="val">90%</i></span>
+              <div class="progress-bar-wrap">
+                <div class="progress-bar" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
+              </div>
+            </div>
+            <div class="progress">
+              <span class="skill">Photoshop / Editing / Design <i class="val">75%</i></span>
+              <div class="progress-bar-wrap">
+                <div class="progress-bar" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
+            <div class="progress">
+              <span class="skill">International Negotiations & Sales <i class="val">95%</i></span>
+              <div class="progress-bar-wrap">
+                <div class="progress-bar" role="progressbar" aria-valuenow="95" aria-valuemin="0" aria-valuemax="100"></div>
+              </div>
+            </div>
+            <div class="progress">
+              <span class="skill">Supply Chain & Procurement <i class="val">90%</i></span>
+              <div class="progress-bar-wrap">
+                <div class="progress-bar" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
+              </div>
+            </div>
+            <div class="progress">
+              <span class="skill">Business Strategy & Market Expansion <i class="val">95%</i></span>
+              <div class="progress-bar-wrap">
+                <div class="progress-bar" role="progressbar" aria-valuenow="95" aria-valuemin="0" aria-valuemax="100"></div>
+              </div>
+            </div>
+            <div class="progress">
+              <span class="skill">Technical Inspections & Quality Control <i class="val">90%</i></span>
+              <div class="progress-bar-wrap">
+                <div class="progress-bar" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- End Business Skills Section -->
+    <!-- ======= Resume Section ======= -->
+    <section id="resume" class="resume">
+      <div class="container">
+        <div class="section-title">
+          <h2>Βιογραφικό</h2>
+          <p>
+              Σύμβουλος Επιχειρήσεων & Ειδικός στις Τεχνικές Λειτουργίες με ισχυρό υπόβαθρο στην ανάπτυξη λογισμικού, 
+              στις διεθνείς πωλήσεις, στον συντονισμό logistics και στη διαχείριση εφοδιαστικής αλυσίδας. Γεφυρώνω το χάσμα μεταξύ 
+              τεχνικών και εμπορικών τομέων, προσφέροντας αποδοτικές και κλιμακούμενες λύσεις.
+          </p>
+        </div>
+        <div class="row">
+          <div class="col-lg-6" data-aos="fade-up">
+              <h3 class="resume-title">Προσωπικότητα</h3>
+              <div class="resume-item pb-0">
+                  <h4>Σταθης Σαμαρας</h4>
+                  <p><em>Συνδυάζοντας τεχνική γνώση με επιχειρηματική αντίληψη, διαχειρίζομαι σύνθετα βιομηχανικά έργα, αναπτύσσω συστήματα ERP/CRM και ηγούμαι διεθνών διαπραγματεύσεων για εμπορικές συνεργασίες.</em></p>
+                  <ul>
+                      <li>Θεσσαλονίκη, Ελλάδα</li>
+                      <li>+30 6994 723 600</li>
+                      <li>info@oktoweb.gr</li>
+                      <li>www.oktoweb.gr</li>
+                  </ul>
+              </div>
+              <h3 class="resume-title">Εκπαίδευση</h3>
+              <div class="resume-item">
+                  <h4>Πτυχιο Τεχνικης Σχολης</h4>
+                  <h5>2000 - 2004</h5>
+                  <p><em>Μηχανολόγος, Θεσσαλονίκη, Ελλάδα</em></p>
+                  <p>
+                      Εξειδίκευση στη Μηχανολογία, τα Βιομηχανικά Συστήματα και τις Τεχνικές Λειτουργίες.
+                      Ισχυρό υπόβαθρο σε τεχνικά σχέδια, μηχανικά συστήματα και βιομηχανικές εφαρμογές.
+                  </p>
+              </div>
+              <h3 class="resume-title">Βασικές Δεξιότητες</h3>
+              <div class="resume-item">
+                  <ul>
+                      <li>Ανάπτυξη & Ενσωμάτωση ERP / CRM</li>
+                      <li>Διεθνείς Πωλήσεις & Διαπραγματεύσεις</li>
+                      <li>Συντονισμός Logistics & Διαχείριση Εφοδιαστικής Αλυσίδας</li>
+                      <li>Ανάλυση Δεδομένων</li>
+                      <li>Υποστήριξη Μετά την Πώληση & Τεχνικές Επιθεωρήσεις</li>
+                  </ul>
+              </div>
+          </div>
+          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
+              <h3 class="resume-title">Επαγγελματική Εμπειρία</h3>
+              <div class="resume-item">
+                  <h4>Συμβουλος Επιχειρησεων & Υπευθυνος Τεχνικων Λειτουργιων</h4>
+                  <h5>2014 - Σήμερα</h5>
+                  <p><em>Oktoweb Solutions, Θεσσαλονίκη, Ελλάδα</em></p>
+                  <ul>
+                      <li>Διαχείριση βιομηχανικών έργων από την προμήθεια έως την παράδοση και την τεχνική υποστήριξη.</li>
+                      <li>Ανάπτυξη προσαρμοσμένου ERP/CRM λογισμικού για τη βελτιστοποίηση των λειτουργιών και την παρακολούθηση της κερδοφορίας.</li>
+                      <li>Διαπραγμάτευση διεθνών συμβολαίων και τιμών με κατασκευαστές και διανομείς σε περισσότερες από 18 χώρες.</li>
+                      <li>Εποπτεία λειτουργιών logistics, εφοδιαστικής αλυσίδας και υποστήριξης τεχνικών προϊόντων.</li>
+                      <li>Συντονισμός διατμηματικών ομάδων στους τομείς πωλήσεων, logistics και τεχνικής υποστήριξης.</li>
+                  </ul>
+              </div>
+              <div class="resume-item">
+                  <h4>Μηχανικος Λογισμικου & ERP/CRM Developer</h4>
+                  <h5>2008 - 2014</h5>
+                  <p><em>Freelance & Project-Based</em></p>
+                  <ul>
+                      <li>Ανάπτυξη web εφαρμογών κρίσιμων για τις επιχειρήσεις, χρησιμοποιώντας Python, Django και PostgreSQL.</li>
+                      <li>Ενσωμάτωση ERP modules για οικονομική διαχείριση, αποθέματα και ροές logistics.</li>
+                      <li>Συνεργασία με βιομηχανικούς πελάτες για την αυτοματοποίηση διαδικασιών και τη βελτίωση των αναφορών.</li>
+                  </ul>
+              </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- End Resume Section -->
+    <!-- ======= Portfolio Section ======= -->
+    <section id="portfolio" class="portfolio section-bg">
+      <div class="container">
+        <div class="section-title">
+          <h2>Συλλογή</h2>
+          <p>έχω υλοποιήσει έργα που συνδυάζουν τεχνική εξειδίκευση με επιχειρηματική στρατηγική. Η Συλλογή μου περιλαμβάνει ανάπτυξη λογισμικού ERP/CRM, βελτιστοποίηση εφοδιαστικής αλυσίδας, συμβουλευτική στις βιομηχανικές πωλήσεις και διεθνείς διαπραγματεύσεις. Κάθε έργο αντικατοπτρίζει τη δέσμευσή μου στην παροχή αποδοτικών και προσανατολισμένων λύσεων.</p>
+        </div>
+        <div class="row" data-aos="fade-up">
+          <div class="col-lg-12 d-flex justify-content-center">
+            <ul id="portfolio-flters">
+              <li data-filter="*" class="filter-active">All</li>
+              <li data-filter=".filter-app">China</li>
+              <li data-filter=".filter-card">Japan</li>
+              <li data-filter=".filter-web">Europe</li>
+            </ul>
+          </div>
+        </div>
+        <div class="row portfolio-container" data-aos="fade-up" data-aos-delay="100">
+          <div class="col-lg-4 col-md-6 portfolio-item filter-app">
+            <div class="portfolio-wrap">
+              <img src="{% static 'img/portfolio/portfolio-1.webp' %}" class="img-fluid" alt="">
+              <div class="portfolio-links">
+                <a href="{% static 'img/portfolio/portfolio-1.webp' %}" data-gallery="portfolioGallery" class="portfolio-lightbox" title="App 1"><i class="bx bx-plus"></i></a>
+                <a href="#" title="More Details"><i class="bx bx-link"></i></a>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6 portfolio-item filter-web">
+            <div class="portfolio-wrap">
+              <img src="{% static 'img/portfolio/portfolio-2.webp' %}" class="img-fluid" alt="">
+              <div class="portfolio-links">
+                <a href="{% static 'img/portfolio/portfolio-2.webp' %}" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Web 3"><i class="bx bx-plus"></i></a>
+                <a href="#" title="More Details"><i class="bx bx-link"></i></a>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6 portfolio-item filter-app">
+            <div class="portfolio-wrap">
+              <img src="{% static 'img/portfolio/portfolio-3.webp' %}" class="img-fluid" alt="">
+              <div class="portfolio-links">
+                <a href="{% static 'img/portfolio/portfolio-3.webp' %}" data-gallery="portfolioGallery" class="portfolio-lightbox" title="App 2"><i class="bx bx-plus"></i></a>
+                <a href="#" title="More Details"><i class="bx bx-link"></i></a>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6 portfolio-item filter-card">
+            <div class="portfolio-wrap">
+              <img src="{% static 'img/portfolio/portfolio-4.webp' %}" class="img-fluid" alt="">
+              <div class="portfolio-links">
+                <a href="{% static 'img/portfolio/portfolio-4.webp' %}" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Card 2"><i class="bx bx-plus"></i></a>
+                <a href="#" title="More Details"><i class="bx bx-link"></i></a>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6 portfolio-item filter-web">
+            <div class="portfolio-wrap">
+              <img src="{% static 'img/portfolio/portfolio-5.webp' %}" class="img-fluid" alt="">
+              <div class="portfolio-links">
+                <a href="{% static 'img/portfolio/portfolio-5.webp' %}" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Web 2"><i class="bx bx-plus"></i></a>
+                <a href="#" title="More Details"><i class="bx bx-link"></i></a>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6 portfolio-item filter-app">
+            <div class="portfolio-wrap">
+              <img src="{% static 'img/portfolio/portfolio-6.webp' %}" class="img-fluid" alt="">
+              <div class="portfolio-links">
+                <a href="{% static 'img/portfolio/portfolio-6.webp' %}" data-gallery="portfolioGallery" class="portfolio-lightbox" title="App 3"><i class="bx bx-plus"></i></a>
+                <a href="#" title="More Details"><i class="bx bx-link"></i></a>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6 portfolio-item filter-card">
+            <div class="portfolio-wrap">
+              <img src="{% static 'img/portfolio/portfolio-7.webp' %}" class="img-fluid" alt="">
+              <div class="portfolio-links">
+                <a href="{% static 'img/portfolio/portfolio-7.webp' %}" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Card 1"><i class="bx bx-plus"></i></a>
+                <a href="#" title="More Details"><i class="bx bx-link"></i></a>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6 portfolio-item filter-card">
+            <div class="portfolio-wrap">
+              <img src="{% static 'img/portfolio/portfolio-8.webp' %}" class="img-fluid" alt="">
+              <div class="portfolio-links">
+                <a href="{% static 'img/portfolio/portfolio-8.webp' %}" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Card 3"><i class="bx bx-plus"></i></a>
+                <a href="#" title="More Details"><i class="bx bx-link"></i></a>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6 portfolio-item filter-web">
+            <div class="portfolio-wrap">
+              <img src="{% static 'img/portfolio/portfolio-9.webp' %}" class="img-fluid" alt="">
+              <div class="portfolio-links">
+                <a href="{% static 'img/portfolio/portfolio-9.webp' %}" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Web 3"><i class="bx bx-plus"></i></a>
+                <a href="#" title="More Details"><i class="bx bx-link"></i></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section><!-- End Portfolio Section -->
+    <!-- ======= Services Section ======= -->
+    <section id="services" class="services">
+      <div class="container">
+          <div class="section-title">
+              <h2>Υπηρεσίες</h2>
+              <p>Full Stack Developer με βαθιά εξειδίκευση στα logistics και τη βιομηχανική αυτοματοποίηση, ειδικεύομαι στην ανάπτυξη κλιμακούμενων, υψηλής απόδοσης εφαρμογών που βελτιστοποιούν την εφοδιαστική αλυσίδα.</p>
+          </div>
+          <div class="row">
+              <div class="col-lg-4 col-md-6 icon-box" data-aos="fade-up">
+                  <div class="icon"><i class="bi bi-code-slash"></i></div>
+                  <h4 class="title"><a href="">Full Stack Development</a></h4>
+                  <p class="description">Ανάπτυξη ολοκληρωμένων web εφαρμογών με σύγχρονες τεχνολογίες όπως Django, FastAPI, PostgreSQL και RESTful API, διασφαλίζοντας υψηλή απόδοση, ασφάλεια και επεκτασιμότητα.</p>
+              </div>
+              <div class="col-lg-4 col-md-6 icon-box" data-aos="fade-up" data-aos-delay="100">
+                  <div class="icon"><i class="bi bi-truck"></i></div>
+                  <h4 class="title"><a href="">Λογισμικό Logistics & Εφοδιαστικής Αλυσίδας</a></h4>
+                  <p class="description">Ανάπτυξη προσαρμοσμένων εφαρμογών logistics για διαχείριση αποθηκών, παρακολούθηση στόλου, βελτιστοποίηση αποθεμάτων και αυτοματοποίηση προμηθειών.</p>
+              </div>
+              <div class="col-lg-4 col-md-6 icon-box" data-aos="fade-up" data-aos-delay="200">
+                  <div class="icon"><i class="bi bi-bar-chart-line"></i></div>
+                  <h4 class="title"><a href="">Αυτοματοποίηση Διαδικασιών με Δεδομένα</a></h4>
+                  <p class="description">Αυτοματοποίηση επιχειρησιακών διαδικασιών με ανάλυση δεδομένων, ενσωμάτωση ERP και λύσεις προληπτικής συντήρησης για αύξηση της αποδοτικότητας και μείωση του κόστους.</p>
+              </div>
+              <div class="col-lg-4 col-md-6 icon-box" data-aos="fade-up" data-aos-delay="300">
+                  <div class="icon"><i class="bi bi-globe"></i></div>
+                  <h4 class="title"><a href="">Cloud & DevOps Solutions</a></h4>
+                  <p class="description">Υλοποίηση και διαχείριση εφαρμογών σε PythonAnywhere, Django Europe και άλλες πλατφόρμες, διασφαλίζοντας υψηλή διαθεσιμότητα και αυτοματοποιημένες CI/CD διαδικασίες.</p>
+              </div>
+              <div class="col-lg-4 col-md-6 icon-box" data-aos="fade-up" data-aos-delay="400">
+                  <div class="icon"><i class="bi bi-gear-wide-connected"></i></div>
+                  <h4 class="title"><a href="">Ανάπτυξη API & Ενσωματώσεις</a></h4>
+                  <p class="description">Σχεδιασμός και υλοποίηση RESTful και GraphQL API, επιτρέποντας ενσωμάτωση με σύγχρονες πλατφόρμες logistics και επιχειρησιακά οικοσυστήματα.</p>
+              </div>
+              <div class="col-lg-4 col-md-6 icon-box" data-aos="fade-up" data-aos-delay="500">
+                  <div class="icon"><i class="bi bi-tools"></i></div>
+                  <h4 class="title"><a href="">Συμβουλευτική & Αρχιτεκτονική Συστημάτων</a></h4>
+                  <p class="description">Παροχή εξειδικευμένων συμβουλών σε αρχιτεκτονική λογισμικού, σχεδίαση microservices, βελτιστοποίηση βάσεων δεδομένων και στρατηγικές ψηφιακού μετασχηματισμού.</p>
+              </div>
+          </div>
+      </div>
+    </section>  
+    <!-- End Services Section -->
+    <!-- ======= Exhibitions Section ======= -->
+    <section id="testimonials" class="testimonials section-bg">
+      <div class="container">
+        <div class="section-title">
+          <h2>Εκθέσεις</h2>
+          <p>Καθ’ όλη τη διάρκεια της επαγγελματικής μου πορείας, συμμετείχα ενεργά σε σημαντικές διεθνείς εκθέσεις, παρουσιάζοντας καινοτόμες λύσεις. Οι εκθέσεις αυτές αποτελούν κομβικά σημεία δικτύωσης, όπου ηγετικές μορφές του κλάδου, κατασκευαστές και πρωτοπόροι συναντώνται για να ανταλλάξουν ιδέες, να εξερευνήσουν αναδυόμενες τάσεις και να διαμορφώσουν το μέλλον της επιχειρησιακής αποδοτικότητας.</p>
+        </div>
+        <div class="testimonials-slider swiper" data-aos="fade-up" data-aos-delay="100">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <div class="testimonial-item" data-aos="fade-up">
+                <p>
+                  <i class="bx bxs-quote-alt-left quote-icon-left"></i>
+                  Participation in BAUMA 2020, the world’s leading trade fair for construction, mining and industrial machinery, provided a deep understanding of cutting-edge lifting equipment, automated systems, and logistics solutions. It was a great opportunity to explore innovations that improve efficiency in material handling and heavy equipment logistics.
+                  <i class="bx bxs-quote-alt-right quote-icon-right"></i>
+                </p>
+                <img src="{% static 'img/testimonials/testimonials-6.webp' %}" class="testimonial-img" alt="">
+                <h3>BAUMA 2020</h3>
+                <h4>Munich, Germany</h4>
+              </div>
+            </div><!-- End testimonial item -->
+            <div class="swiper-slide">
+              <div class="testimonial-item" data-aos="fade-up" data-aos-delay="100">
+                <p>
+                  <i class="bx bxs-quote-alt-left quote-icon-left"></i>
+                  SITL Paris 2021 was a key exhibition in transport and logistics innovation. Engaging with global logistics professionals, I gained valuable insights into advanced automation, AI-driven supply chain management, and next-generation fleet tracking systems, enhancing my expertise in logistics software development.
+                  <i class="bx bxs-quote-alt-right quote-icon-right"></i>
+                </p>
+                <img src="{% static 'img/testimonials/testimonials-7.webp' %}" class="testimonial-img" alt="">
+                <h3>SITL 2021</h3>
+                <h4>Paris, France</h4>
+              </div>
+            </div><!-- End testimonial item -->
+            <div class="swiper-slide">
+              <div class="testimonial-item" data-aos="fade-up" data-aos-delay="200">
+                <p>
+                  <i class="bx bxs-quote-alt-left quote-icon-left"></i>
+                  LOGIMAT Stuttgart 2019 showcased cutting-edge warehouse automation, robotics, and smart logistics solutions. Engaging with technology providers and logistics professionals, I deepened my knowledge of AI-driven warehouse management systems, enhancing my ability to develop efficient logistics applications.
+                  <i class="bx bxs-quote-alt-right quote-icon-right"></i>
+                </p>
+                <img src="{% static 'img/testimonials/testimonials-8.webp' %}" class="testimonial-img" alt="">
+                <h3>LOGIMAT 2019</h3>
+                <h4>Stuttgart, Germany</h4>
+              </div>
+            </div><!-- End testimonial item -->
+            <div class="swiper-slide">
+              <div class="testimonial-item" data-aos="fade-up" data-aos-delay="300">
+                <p>
+                  <i class="bx bxs-quote-alt-left quote-icon-left"></i>
+                  XENIA 2022 in Athens focused on supply chain and logistics innovations for the hospitality industry. Exploring new technologies in procurement, warehousing, and last-mile delivery systems, I gained insights into how logistics solutions can be optimized for large-scale operations in the hospitality sector.
+                  <i class="bx bxs-quote-alt-right quote-icon-right"></i>
+                </p>
+                <img src="{% static 'img/testimonials/testimonials-9.webp' %}" class="testimonial-img" alt="">
+                <h3>XENIA 2022</h3>
+                <h4>Athens, Greece</h4>
+              </div>
+            </div><!-- End testimonial item -->
+            <div class="swiper-slide">
+              <div class="testimonial-item" data-aos="fade-up" data-aos-delay="400">
+                <p>
+                  <i class="bx bxs-quote-alt-left quote-icon-left"></i>
+                  LOGISTICS & TRANSPORT EXPO Athens was a key event bringing together leading supply chain professionals, automation specialists, and industry experts from across Europe. The exhibition provided valuable insights into the latest advancements in fleet management, AI-powered logistics platforms, and next-generation automated warehousing.
+                  <i class="bx bxs-quote-alt-right quote-icon-right"></i>
+                </p>
+                <img src="{% static 'img/testimonials/testimonials-10.webp' %}" class="testimonial-img" alt="">
+                <h3>LOGISTICS EXPO</h3>
+                <h4>Athens, Greece</h4>
+              </div>
+            </div><!-- End testimonial item -->
+          </div>
+          <div class="swiper-pagination"></div>
+        </div>
+      </div>
+    </section><!-- End Testimonials Section -->
+    <!-- ======= Contact Section ======= -->
+    <section id="contact" class="contact">
+      <div class="container">
+        <div class="section-title">
+          <h2>Επικοινωνία</h2>
+          <p>Αν αναζητάτε ένα άτομο με εμπειρία στη βιομηχανία, στρατηγική σκέψη και βαθιά γνώση στις επιχειρήσεις, θα χαρώ να συζητήσουμε πώς μπορώ να συμβάλω στην ομάδα σας. Είμαι πάντα ανοιχτός σε νέες προκλήσεις και ουσιαστικές συνεργασίες.</p>
+        </div>
+        <div class="row" data-aos="fade-in">
+          <div class="col-lg-5 d-flex align-items-stretch">
+            <div class="info">
+              <div class="address">
+                <i class="bi bi-geo-alt"></i>
+                <h4>Περιοχή:</h4>
+                <p>Θεσσαλονίκη, Ελλάδα, Τ.Κ 57022</p>
+              </div>
+              <div class="email">
+                <i class="bi bi-envelope"></i>
+                <h4>Email:</h4>
+                <p>info@oktoweb.gr</p>
+              </div>
+              <div class="phone">
+                <i class="bi bi-phone"></i>
+                <h4>Call:</h4>
+                <p>+30 6994 723 600</p>
+              </div>
+              <iframe 
+                src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d48454.261813086385!2d22.904827545682043!3d40.621250329575!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sel!2sgr!4v1743013673117!5m2!1sel!2sgr" 
+                frameborder="0" style="border:0; width: 100%; height: 290px;" allowfullscreen>
+            </iframe>
+            </div>
+          </div>
+          <div class="col-lg-7 mt-5 mt-lg-0 d-flex align-items-stretch">
+            {% if success_message %}
+            <div class="alert alert-success">{{ success_message }}</div>
+            {% endif %}
+
+            {% if error_message %}
+            <div class="alert alert-danger">{{ error_message }}</div>
+            {% endif %}
+            <form action="{% url 'inner-page' %}" method="post" role="form" class="php-email-form">
+              {% csrf_token %}
+              <div class="row">
+                <div class="form-group col-md-6">
+                  <label for="name">Επωνυμία</label>
+                  <input type="text" name="name" class="form-control" id="name" value="{{ name|default:'' }}" required>
+                </div>
+                <div class="form-group col-md-6">
+                  <label for="name">Your Email</label>
+                  <input type="email" class="form-control" name="email" id="email" value="{{ email|default:'' }}" required>
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="name">Θέμα</label>
+                <input type="text" class="form-control" name="subject" id="subject" value="{{ subject|default:'' }}" required>
+              </div>
+              <div class="form-group">
+                <label for="name">Μήνυμα</label>
+                <textarea class="form-control" name="message" rows="10" required>{{ message|default:'' }}</textarea>
+              </div>
+              <div class="text-center"><button type="submit">Αποστολή</button></div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section><!-- End Contact Section -->
+  </main><!-- End #main -->
+  <!-- ======= Footer ======= -->
+  <footer id="footer">
+    <div class="container">
+      <div class="copyright">
+        &copy; Copyright <strong><span>Okto Web</span></strong>
+      </div>
+      <div class="credits">
+        Designed by <a href="https://www.oktoweb.gr/">S t a t h i s</a>
+      </div>
+    </div>
+  </footer><!-- End  Footer -->
+  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+  <!-- Vendor JS Files -->
+  <script src="{% static 'vendor/purecounter/purecounter_vanilla.js' %}"></script>
+  <script src="{% static 'vendor/aos/aos.js' %}"></script>
+  <script src="{% static 'vendor/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
+  <script src="{% static 'vendor/glightbox/js/glightbox.min.js' %}"></script>
+  <script src="{% static 'vendor/isotope-layout/isotope.pkgd.min.js' %}"></script>
+  <script src="{% static 'vendor/swiper/swiper-bundle.min.js' %}"></script>
+  <script src="{% static 'vendor/typed.js/typed.umd.js' %}"></script>
+  <script src="{% static 'vendor/waypoints/noframework.waypoints.js' %}"></script>
+  <!-- <script src="{% static 'vendor/php-email-form/validate.js' %}"></script> -->
+  <!-- Template Main JS File -->
+  <script src="{% static 'js/main.js' %}"></script>
+</body>
+</html>
