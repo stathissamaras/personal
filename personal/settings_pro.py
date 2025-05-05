@@ -32,7 +32,8 @@ INSTALLED_APPS = [
          #'HOST': config('DB_HOST', default='localhost'),
      #}
  #}
-DATABASES = {'default': dj_database_url.config(default=config('postgresql://root:MilYKYvUMtP6XLu05CUoR2eM2Rs8TbPI@dpg-d0cgj5umcj7s738eq5fg-a.frankfurt-postgres.render.com/personal_database_ti71'))
+DATABASES = {
+    'default': dj_database_url.config(default=config('DATABASE_URL'))
 }
 
 # HTTPS settings
