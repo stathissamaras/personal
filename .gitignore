@@ -24,3 +24,7 @@ env/
 # Migrations
 **/migrations/
 !**/migrations/__init__.py
+
+# Settings
+personal/settings_dev.py
+
